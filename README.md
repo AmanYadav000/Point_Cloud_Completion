@@ -48,6 +48,9 @@ The combination of these networks allows the model to learn effective representa
 ![plane](images/plane.png)
 ![car](images/car.png)
 
+# Team Members
 
-
+- [Aman Yadav](https://github.com/AmanYadav000)
+- [Aman Tiwari](https://github.com/aman2603tiwari)
+- [Aayush Rai](https://github.com/Whizamyhmer)
 
