@@ -40,10 +40,13 @@ Combined Model: PointCompletionNet
 The PointCompletionNet integrates the encoder and decoder to form a complete end-to-end model for point cloud completion. The model processes input point clouds through the encoder to extract features, and then through the decoder to reconstruct the missing parts of the point cloud. The architecture supports flexible input sizes, and the default number of output points is set to 2048.  
 
 The combination of these networks allows the model to learn effective representations of point clouds and accurately predict missing regions, making it a robust solution for various 3D reconstruction tasks.
+![model_image](images/model.png)
 
 
 # Results
-
+![chair](images/chair.png)
+![plane](images/plane.png)
+![car](images/car.png)
 
 
 
