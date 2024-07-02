@@ -29,15 +29,15 @@ FC1: A fully connected layer reducing the 1024-dimensional vector to 512 dimensi
 FC2: Another fully connected layer further reducing the 512 dimensions to 256.  
 FC3: The final fully connected layer brings the feature vector back to 1024 dimensions.  
 
-PointCloud Decoder
-The PointCloudDecoder is tasked with reconstructing the complete point cloud from the high-dimensional features provided by the encoder. The decoder consists of three fully connected layers:
-FC1: Reduces the 1024-dimensional input to 256 dimensions.
-FC2: Expands the 256-dimensional vector to 512 dimensions.
-FC3: Converts the 512-dimensional features into the desired number of points, each having 3 coordinates (x, y, z).
-The output of the decoder is reshaped to match the original point cloud structure.
+PointCloud Decoder  
+The PointCloudDecoder is tasked with reconstructing the complete point cloud from the high-dimensional features provided by the encoder. The decoder consists of three fully connected layers:  
+FC1: Reduces the 1024-dimensional input to 256 dimensions.  
+FC2: Expands the 256-dimensional vector to 512 dimensions.  
+FC3: Converts the 512-dimensional features into the desired number of points, each having 3 coordinates (x, y, z).  
+The output of the decoder is reshaped to match the original point cloud structure.  
 
-Combined Model: PointCompletionNet
-The PointCompletionNet integrates the encoder and decoder to form a complete end-to-end model for point cloud completion. The model processes input point clouds through the encoder to extract features, and then through the decoder to reconstruct the missing parts of the point cloud. The architecture supports flexible input sizes, and the default number of output points is set to 2048.
+Combined Model: PointCompletionNet  
+The PointCompletionNet integrates the encoder and decoder to form a complete end-to-end model for point cloud completion. The model processes input point clouds through the encoder to extract features, and then through the decoder to reconstruct the missing parts of the point cloud. The architecture supports flexible input sizes, and the default number of output points is set to 2048.  
 
 The combination of these networks allows the model to learn effective representations of point clouds and accurately predict missing regions, making it a robust solution for various 3D reconstruction tasks.
 
