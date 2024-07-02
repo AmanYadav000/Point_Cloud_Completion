@@ -19,15 +19,15 @@ which contains both partial point cloud and complete point cloud.
 # Model Architecture
 The point cloud completion model is designed to effectively process and reconstruct 3D point clouds using a combination of encoder and decoder networks. The architecture is inspired by the PointNet framework, which is well-suited for handling unordered point sets and capturing their geometric features.
 
-PointNet Encoder
-The PointNetEncoder is responsible for extracting high-dimensional feature representations from the input point cloud. The encoder consists of three 1D convolutional layers followed by three fully connected layers:
-Conv1: Converts the 3-dimensional input points to 64 dimensions.
-Conv2: Expands the 64-dimensional features to 128 dimensions.
-Conv3: Further expands the 128-dimensional features to 1024 dimensions.
-Max Pooling: A global max pooling operation is applied to capture the most prominent features.
-FC1: A fully connected layer reducing the 1024-dimensional vector to 512 dimensions.
-FC2: Another fully connected layer further reducing the 512 dimensions to 256.
-FC3: The final fully connected layer brings the feature vector back to 1024 dimensions.
+PointNet Encoder<br>
+The PointNetEncoder is responsible for extracting high-dimensional feature representations from the input point cloud. The encoder consists of three 1D convolutional layers followed by three fully connected layers:  
+Conv1: Converts the 3-dimensional input points to 64 dimensions.  
+Conv2: Expands the 64-dimensional features to 128 dimensions.  
+Conv3: Further expands the 128-dimensional features to 1024 dimensions.  
+Max Pooling: A global max pooling operation is applied to capture the most prominent features.  
+FC1: A fully connected layer reducing the 1024-dimensional vector to 512 dimensions.  
+FC2: Another fully connected layer further reducing the 512 dimensions to 256.  
+FC3: The final fully connected layer brings the feature vector back to 1024 dimensions.  
 
 PointCloud Decoder
 The PointCloudDecoder is tasked with reconstructing the complete point cloud from the high-dimensional features provided by the encoder. The decoder consists of three fully connected layers:
